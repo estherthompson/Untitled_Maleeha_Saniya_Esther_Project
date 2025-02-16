@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./Home.css";
+import NavBar from "./NavBar";
+import Banner from "./Banner";
+import Community from "./Community";
 
 function Home() {
   return (
-    <div>
-      <h1>Welcome to Home Page</h1>
+    <div className="Home-container">
+      <NavBar />
+      <Banner />
+      <Community />
     </div>
   );
 }
