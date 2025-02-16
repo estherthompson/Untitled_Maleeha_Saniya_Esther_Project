@@ -1,22 +1,140 @@
-.banner {
-  width: 100%;
-  height: 200px;
-  background-color: #f4a261;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+
+.banner_styling {
   position: relative;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-.banner-image {
-  position: absolute;
+.banner_styling img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
+
+/* Navigation Bar at Bottom with Mesh Styling */
+.navbar {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px; /* Same width as mesh-container */
+  background-color: rgb(255, 255, 255);
+  border: 2px dotted #ffffff;
+  border-radius: 25px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.nav-item {
+  color: black;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: "Tektur", serif;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #ffd700;
+}
+
+/* Mesh Container */
+.mesh-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 700px;
+  height: 400px;
+  background: rgb(255, 255, 255);
+  border: 2px dotted #ffffff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+/* Banner Bubble */
+.banner-content {
+  margin-bottom: 70px;
+  padding: 10px 30px;
+  background: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  color: black;
+  animation: floatingPulse 2s ease-in-out infinite alternate;
+  width: 350px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+
+
+@keyframes floatingPulse {
+  0% { transform: translateY(-5px); opacity: 0.9; }
+  100% { transform: translateY(5px); opacity: 1; }
+}
+
+
+
+
+/* Styling for H1 - A HOME AWAY FROM HOME (Above Mesh) */
+.home-tagline {
+  font-family: "Turret Road", serif;
+  font-weight: 400; /* Regular weight */
+  font-style: bold;
+  font-size: 40px;
+  color: #000000;
+  text-align: center;
+  margin-top: -300px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.banner-text {
+  font-family: "Tektur", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 20px;
+  font-weight: lighter;
+  color: black;
+  animation: blueSparkle 2s infinite alternate;
+}
+
+@keyframes blueSparkle {
+  0% { text-shadow: 0 0 3px rgba(0, 119, 255, 0.5); }
+  50% { text-shadow: 0 0 8px rgba(0, 119, 255, 0.8), 0 0 12px rgba(0, 119, 255, 0.5); }
+  100% { text-shadow: 0 0 4px rgba(0, 119, 255, 0.6); }
+}
+/* Beacon Logo (Round Shape) */
+.beacon-logo-static {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.95;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  animation: floatingBanner 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatingBanner {
+  0% { transform: translateX(-50%) translateY(-5px); }
+  100% { transform: translateX(-50%) translateY(5px); }
+}
+
